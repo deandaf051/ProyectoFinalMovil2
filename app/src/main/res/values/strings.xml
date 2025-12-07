@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">ProyectoFinalMovil3</string>
+
+    <string name="nombreApp">EcoTrack</string>
+    
+    <!-- vista inicio de sesion -->
+    <string name="iniciarSesion">Iniciar Sesion</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="fraseInicio">Únete a nuestra comunidad ambiental</string>
+    <string name="correo">Correo Electronico</string>
+    <string name="muestraCorreo">tu@correo.com</string>
+    <string name="contrasena">Contraseña</string>
+
+
+
 </resources>
