@@ -2,7 +2,7 @@
     <string name="app_name">ProyectoFinalMovil3</string>
 
     <string name="nombreApp">EcoTrack</string>
-    
+
     <!-- vista inicio de sesion -->
     <string name="iniciarSesion">Iniciar Sesion</string>
     <string name="registrarse">Registrarse</string>
@@ -13,8 +13,6 @@
     <string name="crearCuenta">Crear Cuenta</string>
     <string name="nombre">Nombre</string>
     <string name="nombreCompleto">Nombre Completo</string>
-
-
 
 
 </resources>

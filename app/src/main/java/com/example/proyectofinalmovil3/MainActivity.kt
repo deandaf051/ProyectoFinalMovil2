@@ -1,5 +1,6 @@
 package com.example.proyectofinalmovil3
 
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
@@ -14,6 +15,8 @@ import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.Firebase
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.database
+import com.example.proyectofinalmovil3.ActivityHome
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -162,16 +165,20 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    private fun comprobarInicioSesion(){
+    private fun comprobarInicioSesion() {
         val savedEmail = sharedPreferences.getString("email", "")
         val savedName = sharedPreferences.getString("name", "")
-        if (!savedName.isNullOrEmpty() || !savedEmail.isNullOrEmpty()) {
+
+        if (!savedName.isNullOrEmpty() && !savedEmail.isNullOrEmpty()) {
             Toast.makeText(this, "Bienvenido $savedName", Toast.LENGTH_SHORT).show()
-            //val intent = Intent(this, MainActivity2::class.java)
-            //startActivity(intent)
-            finish()
+
+            val intent = Intent(this, ActivityHome::class.java)
+            startActivity(intent)
+            finish() //
+             // evita volver atrás al login
         }
     }
+
 
     private fun vistaRegistro(){
         vistaInicioSesion.visibility = View.GONE
