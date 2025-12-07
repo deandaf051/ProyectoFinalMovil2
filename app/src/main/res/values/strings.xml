@@ -10,6 +10,10 @@
     <string name="correo">Correo Electronico</string>
     <string name="muestraCorreo">tu@correo.com</string>
     <string name="contrasena">Contraseña</string>
+    <string name="crearCuenta">Crear Cuenta</string>
+    <string name="nombre">Nombre</string>
+    <string name="nombreCompleto">Nombre Completo</string>
+
 
 
 
