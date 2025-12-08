@@ -2,6 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorBackground">
 
     <ScrollView
@@ -62,6 +63,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/nombre"
+                    android:drawableStart="@drawable/ic_user"
+                    android:drawablePadding="6dp"
+                    app:drawableTint="@color/colorTextSecondary"
                     />
 
                 <EditText
@@ -84,6 +88,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/correo"
+                    android:drawableStart="@drawable/ic_mail"
+                    android:drawablePadding="6dp"
+                    app:drawableTint="@color/colorTextSecondary"
                     />
 
                 <Button
