@@ -30,6 +30,8 @@
         <activity
             android:name=".ActivityHome"
             android:exported="false" />
+        <activity android:name=".ActivityAdmin"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

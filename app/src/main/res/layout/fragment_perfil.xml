@@ -293,6 +293,16 @@
                 android:backgroundTint="@color/botonesSecundario2"
                 android:textColor="@color/blanco"
                 />
+            <Button
+                android:id="@+id/adminButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="Admin"
+                android:backgroundTint="@color/encabezados"
+                android:textColor="@android:color/white"
+                android:visibility="gone" />
+
 
         </LinearLayout>
 

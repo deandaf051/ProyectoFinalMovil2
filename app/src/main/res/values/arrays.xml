@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="categorias_evento">
+        <item>Limpieza</item>
+        <item>Reciclaje</item>
+        <item>Reforestacion</item>
+    </string-array>
+
+</resources>
