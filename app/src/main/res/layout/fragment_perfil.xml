@@ -4,10 +4,290 @@
     android:layout_height="match_parent"
     android:background="@color/colorBackground">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Mapa"
-        android:textSize="24sp"
-        android:layout_gravity="center" />
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="@color/encabezados"
+                android:paddingTop="30dp"
+                android:text="@string/perfil"
+                android:textColor="@color/blanco"
+                android:textStyle="bold"
+                android:paddingLeft="15dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bordes_redondos"
+                android:layout_margin="10dp"
+                android:padding="20dp"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:src="@drawable/outline_account_circle_24"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/miembro"
+                    android:textAlignment="center"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nombre"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/nombreUsuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nombre"
+                    />
+
+                <EditText
+                    android:id="@+id/nombreUsuarioEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nombre"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/correo"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/correoUsuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/correo"
+                    />
+
+                <Button
+                    android:id="@+id/editarPerfilButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/editarInfo"
+                    android:backgroundTint="@color/botonesSecundario2"
+                    android:textColor="@color/blanco"
+                    android:textAlignment="viewStart"
+                    android:layout_marginTop="20dp"
+                    android:drawableLeft="@drawable/outline_edit_24"
+                    android:drawablePadding="0dp"
+                    android:paddingLeft="120dp"
+                    />
+
+                <Button
+                    android:id="@+id/actualizarButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/actualizar"
+                    android:backgroundTint="@color/botonesSecundario2"
+                    android:textColor="@color/blanco"
+                    android:visibility="gone"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bordes_redondos"
+                android:layout_margin="10dp"
+                android:padding="20dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/actividad"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        >
+
+                        <TextView
+                            android:id="@+id/eventosTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryGreen"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/eventos"
+                            android:textAlignment="center"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        >
+
+                        <TextView
+                            android:id="@+id/pasosTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorYellow"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pasos"
+                            android:textAlignment="center"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        >
+
+                        <TextView
+                            android:id="@+id/logrosTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorAccentBlue"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Logros"
+                            android:textAlignment="center"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bordes_redondos"
+                android:layout_margin="10dp"
+                android:padding="20dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/acercaDe"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/version"
+                        android:layout_weight="1"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/numVersion"
+                        android:textAlignment="viewEnd"
+                        android:layout_weight="1"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/organizacion"
+                        android:layout_weight="1"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nombreApp"
+                        android:textAlignment="viewEnd"
+                        android:layout_weight="1"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/cerrarSesionButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="@string/cerrarSesion"
+                android:backgroundTint="@color/botonesSecundario2"
+                android:textColor="@color/blanco"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
 </FrameLayout>

@@ -14,5 +14,19 @@
     <string name="nombre">Nombre</string>
     <string name="nombreCompleto">Nombre Completo</string>
 
+    <!-- vista perfil -->
+    <string name="perfil">Perfil \nAdministra tu cuenta</string>
+    <string name="miembro">Miembro de EcoTrack</string>
+    <string name="editarInfo">Editar Perfil</string>
+    <string name="actualizar">Actualizar</string>
+    <string name="actividad">Tu Actividad</string>
+    <string name="eventos">Eventos</string>
+    <string name="pasos">Pasos</string>
+    <string name="Logros">Logros</string>
+    <string name="acercaDe">Acerca de</string>
+    <string name="version">Version</string>
+    <string name="numVersion">1.0</string>
+    <string name="organizacion">Organizacion</string>
+    <string name="cerrarSesion">Cerrar Sesion</string>
 
 </resources>
