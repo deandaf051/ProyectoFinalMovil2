@@ -12,6 +12,15 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbarAdmin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:title="Admin eventos"
+            android:titleTextColor="@android:color/white"
+            app:menu="@menu/menu_activity_admin" />
+
         <!-- Título de pantalla -->
         <TextView
             android:id="@+id/txtTituloAdmin"

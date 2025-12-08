@@ -7,6 +7,10 @@ import com.example.proyectofinalmovil3.Evento.Evento
 import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import android.content.Intent
+import android.view.Menu
+import android.view.MenuItem
+import com.google.android.material.appbar.MaterialToolbar
 
 class ActivityAdmin : AppCompatActivity() {
 
@@ -33,6 +37,9 @@ class ActivityAdmin : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_admin)
         supportActionBar?.title = "Admin eventos"
+
+        val toolbar = findViewById<MaterialToolbar>(R.id.toolbarAdmin)
+        setSupportActionBar(toolbar)
 
         // 1) Firebase -> nodo "eventos"
         database = FirebaseDatabase.getInstance().reference.child("eventos")
@@ -69,6 +76,8 @@ class ActivityAdmin : AppCompatActivity() {
         btnEditar.setOnClickListener { editarEvento() }
         btnEliminar.setOnClickListener { eliminarEvento() }
         btnLimpiar.setOnClickListener { limpiarCampos() }
+
+
     }
 
     private fun getText(input: TextInputLayout): String =
@@ -244,4 +253,22 @@ class ActivityAdmin : AppCompatActivity() {
         inputLugar.editText?.setText("")
         spinnerCategoria.setSelection(0)
     }
+    // ---------- MENÚ DE 3 PUNTOS (Lista de eventos) ----------
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu_activity_admin, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_lista_eventos -> {
+                // Abrir Activity con la lista de eventos
+                startActivity(Intent(this, ListaEventosActivity::class.java))
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
 }
