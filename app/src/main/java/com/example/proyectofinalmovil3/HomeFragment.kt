@@ -31,6 +31,7 @@ class HomeFragment : Fragment(), SensorEventListener {
     // --- MODIFICADO: Declaración de todas las vistas necesarias ---
     private lateinit var txtCantidadPasos: TextView
     private lateinit var txtCantidadEventos: TextView
+    private var txtCantidadPasos: TextView? = null
     private lateinit var txtNombreUsuario: TextView
     private lateinit var cardBuscarEventos: CardView
     private lateinit var cardMisEstadisticas: CardView
@@ -69,6 +70,8 @@ class HomeFragment : Fragment(), SensorEventListener {
         // --- AÑADIDO: Inicialización de Firebase ---
         database = FirebaseDatabase.getInstance().reference
 
+        actualizarNombre()
+
         // --- MODIFICADO: Llamamos a la función principal que carga todo ---
         cargarDatosDelUsuario()
 
@@ -84,6 +87,9 @@ class HomeFragment : Fragment(), SensorEventListener {
                 Toast.LENGTH_SHORT
             ).show()
         }
+
+        cardBuscarEventos.setOnClickListener { irAFragment(2) }
+        cardMisEstadisticas.setOnClickListener { irAFragment(3) }
 
         return view
     }
@@ -132,6 +138,15 @@ class HomeFragment : Fragment(), SensorEventListener {
                 Log.e("HomeFragment", "Error al cargar las estadísticas.", error.toException())
             }
         })
+    fun irAFragment(posicion: Int) {
+        val activityHome = requireActivity() as ActivityHome
+        activityHome.irAFragment(posicion)
+    }
+
+
+    fun actualizarNombre(){
+        val nombre = sharedPreferences.getString("name", "")
+        txtNombreUsuario.text = nombre
     }
 
     override fun onResume() {

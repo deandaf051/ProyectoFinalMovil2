@@ -29,7 +29,9 @@
                 android:text="Estadísticas"
                 android:textColor="@color/colorWhite"
                 android:textSize="22sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                />
 
             <TextView
                 android:id="@+id/txtSubtituloStats"

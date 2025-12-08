@@ -29,4 +29,12 @@
     <string name="organizacion">Organizacion</string>
     <string name="cerrarSesion">Cerrar Sesion</string>
 
+    <!-- vista preview evento -->
+
+    <string name="fecha">Fecha</string>
+    <string name="categoria">Categoria</string>
+    <string name="inscritos">Inscritos</string>
+    <string name="lugar">Lugar</string>
+    <string name="inscribirse">Inscribirse</string>
+
 </resources>

@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
     <!-- Los permisos deben ir aquí, fuera de la etiqueta <application> -->
     <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Permiso para ubicación precisa -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- Permiso para ubicación aproximada -->
-
-
     <!-- Opcional, solo para indicar que usamos step counter -->
     <uses-feature
         android:name="android.hardware.sensor.stepcounter"
@@ -22,14 +19,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoFinalMovil3">
-
+        <activity
+            android:name=".previewEvento"
+            android:exported="false" />
         <!-- ===================== API KEY DE GOOGLE MAPS ===================== -->
         <!-- La clave debe ir aquí, DENTRO de la etiqueta <application> -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCM3zNYy_MfgndcvJB5gyI0C4ghfCraj2o" />
-        <!-- ================================================================= -->
-
+            android:value="AIzaSyCM3zNYy_MfgndcvJB5gyI0C4ghfCraj2o" /> <!-- ================================================================= -->
         <activity
             android:name=".ActivityHome"
             android:exported="false" />
@@ -38,10 +35,10 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
