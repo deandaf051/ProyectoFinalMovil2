@@ -269,6 +269,7 @@
 
                 <!-- Logro 1: Primeros Pasos -->
                 <LinearLayout
+                    android:id="@+id/logroPrimerosPasos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -276,6 +277,7 @@
                     android:padding="16dp">
 
                     <ImageView
+                        android:id="@+id/imgLogroPrimerosPasos"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:src="@drawable/ic_badge_gray"
@@ -311,6 +313,7 @@
 
                 <!-- Logro 2: Guerrero Ecológico -->
                 <LinearLayout
+                    android:id="@+id/logroGuerreroEcologico"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -318,6 +321,7 @@
                     android:padding="16dp">
 
                     <ImageView
+                        android:id="@+id/imgLogroGuerreroEcologico"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:src="@drawable/ic_badge_gray"

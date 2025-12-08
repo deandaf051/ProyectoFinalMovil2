@@ -3,6 +3,7 @@ package com.example.proyectofinalmovil3
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.LinearLayout
@@ -88,6 +89,7 @@ class MainActivity : AppCompatActivity() {
             if(correo.endsWith(".com")){
                 correo = correo.dropLast(4)
             }
+            Log.d("DepuracionLogin", "Clave generada en Registro: '$correo'")
             // Realizar la autenticación con Firebase
             database.child("usuarios").child(correo).get().addOnSuccessListener { dataSnapshot ->
                 if (dataSnapshot.exists()) {
@@ -97,6 +99,15 @@ class MainActivity : AppCompatActivity() {
                     //El usuario no existe
                     database.child("usuarios").child(correo).child("nombre").setValue(nombre)
                     database.child("usuarios").child(correo).child("contraseña").setValue(contraseña)
+                    val estadisticasIniciales = mapOf(
+                        "eventosAsistidos" to 0,
+                        "pasosTotales" to 0,
+                        "eventosLimpieza" to 0,
+                        "eventosReciclaje" to 0,
+                        "eventosReforestacion" to 0
+                    )
+                    // Crea el sub-nodo "estadisticas" con valores en 0
+                    database.child("usuarios").child(correo).child("estadisticas").setValue(estadisticasIniciales)
                     Toast.makeText(this, "Registro exitoso", Toast.LENGTH_SHORT).show()
 
                     val editor = sharedPreferences.edit()

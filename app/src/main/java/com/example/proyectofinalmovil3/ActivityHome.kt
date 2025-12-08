@@ -24,6 +24,11 @@ class ActivityHome : AppCompatActivity() {
         syncBottomNavWithPager()
     }
 
+    fun irAFragment(posicion: Int) {
+        val viewPager = findViewById<ViewPager2>(R.id.viewPagerHome)
+        viewPager.currentItem = posicion
+    }
+
     private fun setupBottomNav() {
         val navInicio = findViewById<LinearLayout>(R.id.navInicio)
         val navMapa = findViewById<LinearLayout>(R.id.navMapa)

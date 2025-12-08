@@ -20,11 +20,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoFinalMovil3">
         <activity
-            android:name=".AdminLogin"
+            android:name=".previewEvento"
             android:exported="false" />
-        <activity
-            android:name=".ActivityAdmin"
-            android:exported="false" /> <!-- ===================== API KEY DE GOOGLE MAPS ===================== -->
+        <!-- ===================== API KEY DE GOOGLE MAPS ===================== -->
         <!-- La clave debe ir aquí, DENTRO de la etiqueta <application> -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"

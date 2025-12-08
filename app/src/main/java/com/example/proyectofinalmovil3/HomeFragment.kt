@@ -22,6 +22,10 @@ class HomeFragment : Fragment(), SensorEventListener {
 
     private var txtCantidadPasos: TextView? = null
 
+    lateinit var cardBuscarEventos: androidx.cardview.widget.CardView
+    lateinit var cardMisEstadisticas: androidx.cardview.widget.CardView
+
+
     private lateinit var txtNombreUsuario: TextView
 
     private lateinit var sensorManager: SensorManager
@@ -49,6 +53,10 @@ class HomeFragment : Fragment(), SensorEventListener {
         txtCantidadPasos = view.findViewById(R.id.txtCantidadPasos)
         txtNombreUsuario = view.findViewById(R.id.txtNombreUsuario)
 
+        cardBuscarEventos = view.findViewById(R.id.cardBuscarEventos)
+        cardMisEstadisticas = view.findViewById(R.id.cardMisEstadisticas)
+
+
         actualizarNombre()
 
         // SensorManager y sensor de pasos
@@ -65,8 +73,17 @@ class HomeFragment : Fragment(), SensorEventListener {
             txtCantidadPasos?.text = "0"
         }
 
+        cardBuscarEventos.setOnClickListener { irAFragment(2) }
+        cardMisEstadisticas.setOnClickListener { irAFragment(3) }
+
         return view
     }
+
+    fun irAFragment(posicion: Int) {
+        val activityHome = requireActivity() as ActivityHome
+        activityHome.irAFragment(posicion)
+    }
+
 
     fun actualizarNombre(){
         val nombre = sharedPreferences.getString("name", "")
