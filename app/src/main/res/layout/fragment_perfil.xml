@@ -38,6 +38,7 @@
                 >
 
                 <ImageView
+                    android:id="@+id/imageView"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:src="@drawable/outline_account_circle_24"
@@ -116,108 +117,17 @@
                     android:textColor="@color/blanco"
                     android:visibility="gone"
                     />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="@drawable/bordes_redondos"
-                android:layout_margin="10dp"
-                android:padding="20dp"
-                >
-
-                <TextView
+                <Button
+                    android:id="@+id/cambiarFotoButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/actividad"
-                    android:layout_marginTop="10dp"
+                    android:text="Cambiar Foto"
+                    android:backgroundTint="@color/botonesSecundario2"
+                    android:textColor="@color/blanco"
                     />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    >
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_weight="1"
-                        >
-
-                        <TextView
-                            android:id="@+id/eventosTextView"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="0"
-                            android:textAlignment="center"
-                            android:textColor="@color/colorPrimaryGreen"
-                            />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/eventos"
-                            android:textAlignment="center"
-                            />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_weight="1"
-                        >
-
-                        <TextView
-                            android:id="@+id/pasosTextView"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="0"
-                            android:textAlignment="center"
-                            android:textColor="@color/colorYellow"
-                            />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/pasos"
-                            android:textAlignment="center"
-                            />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_weight="1"
-                        >
-
-                        <TextView
-                            android:id="@+id/logrosTextView"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="0"
-                            android:textAlignment="center"
-                            android:textColor="@color/colorAccentBlue"
-                            />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/Logros"
-                            android:textAlignment="center"
-                            />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
             </LinearLayout>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
