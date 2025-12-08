@@ -1,13 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBackground">
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    tools:context=".EventosFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <!-- Parte 1: El Header Azul -->
+    <LinearLayout
+        android:id="@+id/headerEventos"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Mapa"
-        android:textSize="24sp"
-        android:layout_gravity="center" />
-</FrameLayout>
+        android:background="@color/colorAccentBlue"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/txtTituloEventos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eventos"
+            android:textColor="@color/colorWhite"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtSubtituloEventos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Únete a nuestras actividades comunitarias"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- Parte 2: Los Filtros (Chips) -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:clipToPadding="false"
+        android:scrollbars="none">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupFiltros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:singleLine="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipTodos"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Todos los Eventos"
+                android:checked="true"
+                app:chipBackgroundColor="@color/chip_background_selector"
+                android:textColor="@color/chip_text_color_selector"
+                app:chipStrokeWidth="0dp"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipLimpieza"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Limpieza"
+                app:chipBackgroundColor="@color/chip_background_selector"
+                android:textColor="@color/chip_text_color_selector"
+                app:chipStrokeWidth="0dp"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipReciclaje"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reciclaje"
+                app:chipBackgroundColor="@color/chip_background_selector"
+                android:textColor="@color/chip_text_color_selector"
+                app:chipStrokeWidth="0dp"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipReforestacion"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reforestación"
+                app:chipBackgroundColor="@color/chip_background_selector"
+                android:textColor="@color/chip_text_color_selector"
+                app:chipStrokeWidth="0dp"/>
+
+            <!-- Puedes añadir más chips aquí -->
+
+        </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
+
+    <!-- Barra de búsqueda y filtros avanzados (opcional, como en la imagen) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp">
+        <!-- Aquí podrías poner una barra de búsqueda o más filtros si lo necesitas -->
+    </LinearLayout>
+
+
+    <!-- Parte 3: La Lista de Eventos -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewEventos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="80dp"
+        tools:listitem="@layout/item_evento"
+        tools:itemCount="3"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+</LinearLayout>

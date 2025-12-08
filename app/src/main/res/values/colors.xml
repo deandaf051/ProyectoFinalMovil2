@@ -23,4 +23,8 @@
     <color name="colorTextSecondary">#757575</color>
     <color name="colorTagGreen">#43A047</color>
     <color name="colorYellow">#FFEB3B</color>
+    <!-- Colores para los tags y filtros de eventos -->
+    <color name="colorAccentGreen">#4CAF50</color>
+
+    <!-- <color name="colorYellow">#FFC107</color> -->
 </resources>

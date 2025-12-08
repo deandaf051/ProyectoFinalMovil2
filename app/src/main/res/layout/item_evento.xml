@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginTop="12dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="3dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Contenedor para la fecha -->
+        <LinearLayout
+            android:id="@+id/fecha_container"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/date_background_blue"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txtMes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccentBlue"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                tools:text="nov"/>
+
+            <TextView
+                android:id="@+id/txtDia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccentBlue"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                tools:text="30"/>
+        </LinearLayout>
+
+        <!-- Información del Evento -->
+        <TextView
+            android:id="@+id/txtTituloEvento"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/fecha_container"
+            app:layout_constraintTop_toTopOf="@id/fecha_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Limpieza de Parque - Parque Central"/>
+
+        <TextView
+            android:id="@+id/txtDescripcionEvento"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="@color/colorTextSecondary"
+            app:layout_constraintStart_toStartOf="@id/txtTituloEvento"
+            app:layout_constraintTop_toBottomOf="@id/txtTituloEvento"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Únete a nuestro evento de limpieza comunitaria en el Parque Central. ¡Trae..."/>
+
+        <!-- Tags y Inscritos -->
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipCategoria"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:clickable="false"
+            app:chipBackgroundColor="@color/colorAccentBlue"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintStart_toStartOf="@id/txtTituloEvento"
+            app:layout_constraintTop_toBottomOf="@id/txtDescripcionEvento"
+            tools:text="Limpieza"/>
+
+        <TextView
+            android:id="@+id/txtInscritos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:drawableStart="@android:drawable/ic_menu_myplaces"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:textColor="@color/colorTextSecondary"
+            app:drawableTint="@color/colorTextSecondary"
+            app:layout_constraintStart_toEndOf="@id/chipCategoria"
+            app:layout_constraintBottom_toBottomOf="@id/chipCategoria"
+            app:layout_constraintTop_toTopOf="@id/chipCategoria"
+            tools:text="0 inscritos"/>
+
+        <!-- Línea separadora -->
+        <View
+            android:id="@+id/separador"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="12dp"
+            android:background="#E0E0E0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chipCategoria"/>
+
+        <!-- Hora y Lugar -->
+        <TextView
+            android:id="@+id/txtHora"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:drawableStart="@android:drawable/ic_menu_recent_history"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:textColor="@color/colorTextSecondary"
+            app:drawableTint="@color/colorTextSecondary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/separador"
+            tools:text="09:00"/>
+
+        <TextView
+            android:id="@+id/txtLugar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:drawableStart="@android:drawable/ic_menu_mylocation"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorTextSecondary"
+            app:drawableTint="@color/colorTextSecondary"
+            app:layout_constraintStart_toEndOf="@id/txtHora"
+            app:layout_constraintTop_toTopOf="@id/txtHora"
+            app:layout_constraintBottom_toBottomOf="@id/txtHora"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Parque Central, Nueva York, NY"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
